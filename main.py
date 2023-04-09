@@ -1,11 +1,7 @@
 import pygame as pg
 from game_objects import *
-from save import *
-from highscore import *
 import sys
 
-import pygame_menu
-from pygame_menu import themes
 
 
 class Game:
@@ -25,10 +21,6 @@ class Game:
         self.input_active = True
         self.best_scores = []
         self.font = pygame.font.SysFont('babelfish', 25)
-        self.save_data = Save()
-        # self.save_data.add('hs', {})
-
-        self.high_scores = (self.save_data.get('hs'))
         self.table = Records(self)
         self.name = EnterName(self)
 

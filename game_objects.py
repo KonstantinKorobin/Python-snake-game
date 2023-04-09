@@ -7,7 +7,7 @@ vec2 = pg.math.Vector2
 
 class Snake:
     def __init__(self, game):
-
+        self.game = game
         self.size = game.TILE_SIZE
         self.rect = pg.rect.Rect([0, 0, game.TILE_SIZE - 1, game.TILE_SIZE - 1])
         self.rect.center = self.get_random_position()
@@ -17,7 +17,7 @@ class Snake:
         self.length = 1
         self.segments = []
         self.directions = {pg.K_w: 1, pg.K_s: 1, pg.K_a: 1, pg.K_d: 1}
-        self.game = game
+
     def control(self, event):
         if event.type == pg.KEYDOWN:
 
